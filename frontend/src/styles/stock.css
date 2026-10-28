@@ -1,0 +1,415 @@
+
+/* =========================================
+   STOCK MANAGEMENT PAGE
+========================================= */
+
+.stock-operation-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 24px;
+  margin-bottom: 26px;
+  align-items: start;
+  color: #172033;
+}
+
+/* Cards */
+
+.stock-operation-card,
+.stock-info-card,
+.inventory-section {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  min-width: 0;
+}
+
+.stock-operation-card,
+.stock-info-card {
+  padding: 26px;
+}
+
+/* Page headings */
+
+.stock-page h1,
+.stock-management-page h1,
+.stock-operation-layout h1 {
+  color: #172554 !important;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  opacity: 1;
+}
+
+.stock-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stock-card-header h2,
+.stock-info-card h2,
+.inventory-section-header h2 {
+  color: #111827;
+  font-size: 19px;
+  font-weight: 650;
+  margin: 0;
+}
+
+.stock-card-header p,
+.inventory-section-header p {
+  color: #64748b;
+  font-size: 14px;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+/* Operation tabs */
+
+.operation-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  padding: 5px;
+  background: #f1f5f9;
+  border-radius: 10px;
+  margin-bottom: 26px;
+}
+
+.operation-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 0;
+  padding: 13px 8px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #64748b;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.operation-tab:hover {
+  color: #1d4ed8;
+}
+
+.operation-tab.active {
+  background: #ffffff;
+  color: #2563eb;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.12);
+}
+
+/* Stock form */
+
+.stock-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.stock-form label {
+  display: block;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.stock-form input,
+.stock-form select,
+.stock-form textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #172033;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.5;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.stock-form input,
+.stock-form select {
+  min-height: 46px;
+}
+
+.stock-form select {
+  cursor: pointer;
+}
+
+.stock-form select option {
+  color: #172033;
+  background: #ffffff;
+}
+
+.stock-form input:focus,
+.stock-form select:focus,
+.stock-form textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.stock-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.stock-form input::placeholder,
+.stock-form textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* Current stock information */
+
+.current-stock-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.current-stock-box div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.current-stock-box span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.current-stock-box strong {
+  color: #111827;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Submit button */
+
+.stock-submit {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 2px;
+  border: none;
+  border-radius: 9px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.stock-submit:hover {
+  background: #1d4ed8;
+}
+
+.stock-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* How it works card */
+
+.stock-info-card h2 {
+  margin-bottom: 22px;
+}
+
+.operation-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 17px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.operation-info:last-child {
+  border-bottom: none;
+}
+
+.operation-info > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 9px;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.operation-info strong {
+  color: #111827;
+  font-size: 14px;
+}
+
+.operation-info p {
+  margin-top: 5px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Inventory table section */
+
+.inventory-section {
+  overflow: hidden;
+  margin-bottom: 26px;
+}
+
+.inventory-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.inventory-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 280px;
+  max-width: 100%;
+  min-width: 0;
+  color: #94a3b8;
+}
+
+.inventory-search input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #172033;
+  font-size: 15px;
+  box-shadow: none;
+}
+
+.inventory-search input:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Inventory table */
+
+.inventory-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.inventory-section th,
+.inventory-section td {
+  padding: 16px 22px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+  color: #334155;
+  font-size: 14px;
+}
+
+.inventory-section th {
+  background: #f8fafc;
+  color: #475569;
+  font-weight: 650;
+}
+
+.inventory-section tbody tr:hover {
+  background: #f8fafc;
+}
+
+.inventory-section tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Alerts and messages */
+
+.success-message {
+  padding: 13px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #a7f3d0;
+  border-radius: 9px;
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.error-message {
+  padding: 13px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+/* Responsive layout */
+
+@media (max-width: 1000px) {
+  .stock-operation-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .stock-info-card {
+    width: auto;
+  }
+}
+
+@media (max-width: 650px) {
+  .stock-operation-card,
+  .stock-info-card {
+    padding: 17px;
+  }
+
+  .operation-tabs {
+    gap: 3px;
+  }
+
+  .operation-tab {
+    gap: 4px;
+    padding: 11px 4px;
+    font-size: 12px;
+  }
+
+  .inventory-section-header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+  }
+
+  .inventory-search {
+    width: 100%;
+  }
+
+  .inventory-section {
+    overflow-x: auto;
+  }
+
+  .inventory-section table {
+    min-width: 600px;
+  }
+
+  .stock-page h1,
+  .stock-management-page h1,
+  .stock-operation-layout h1 {
+    font-size: 23px;
+  }
+}

@@ -1,0 +1,201 @@
+
+/* Reset styles only inside Ingredients page */
+.ingredients-page {
+  display: block;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 28px;
+  box-sizing: border-box;
+  color: #172554;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.ingredients-page * {
+  box-sizing: border-box;
+}
+
+.ingredients-page h1,
+.ingredients-page h2 {
+  color: #172554 !important;
+  background: transparent !important;
+  text-align: left;
+  opacity: 1;
+}
+
+.ingredients-page h1 {
+  margin: 0 0 10px;
+  font-size: 30px;
+}
+
+.ingredients-page h2 {
+  margin: 0 0 24px;
+  font-size: 23px;
+}
+
+.ingredients-page p {
+  color: #64748b;
+}
+
+.ingredients-page .ingredient-card {
+  display: block;
+  width: 100%;
+  margin: 24px 0;
+  padding: 26px;
+  background: #ffffff !important;
+  border: 1px solid #dbe5f1;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+}
+
+.ingredients-page .ingredient-form-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px 20px;
+}
+
+.ingredients-page .ingredient-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  color: #172554;
+  font-weight: 600;
+}
+
+.ingredients-page .ingredient-field span {
+  color: #172554;
+}
+
+.ingredients-page .ingredient-field input,
+.ingredients-page .ingredient-field select {
+  display: block;
+  width: 100%;
+  height: 48px;
+  padding: 10px 12px;
+  color: #172554 !important;
+  background: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.ingredients-page .ingredient-form-actions,
+.ingredients-page .ingredient-row-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.ingredients-page .ingredient-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 16px;
+  border: 1px solid transparent !important;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.ingredients-page .ingredient-btn-primary {
+  color: #ffffff !important;
+  background: #2563eb !important;
+}
+
+.ingredients-page .ingredient-btn-secondary {
+  color: #1e293b !important;
+  background: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+}
+
+.ingredients-page .ingredient-btn-edit {
+  color: #1d4ed8 !important;
+  background: #dbeafe !important;
+}
+
+.ingredients-page .ingredient-btn-delete {
+  color: #b91c1c !important;
+  background: #fee2e2 !important;
+}
+
+.ingredients-page .ingredient-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.ingredients-page .ingredient-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.ingredients-page .ingredient-table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  background: #ffffff !important;
+}
+
+.ingredients-page .ingredient-table th {
+  padding: 15px;
+  color: #172554 !important;
+  background: #f1f5f9 !important;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.ingredients-page .ingredient-table td {
+  padding: 15px;
+  color: #334155 !important;
+  background: #ffffff !important;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.ingredients-page .ingredient-alert {
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+}
+
+.ingredients-page .ingredient-success {
+  color: #166534 !important;
+  background: #dcfce7 !important;
+}
+
+.ingredients-page .ingredient-error {
+  color: #991b1b !important;
+  background: #fee2e2 !important;
+}
+
+@media (max-width: 1000px) {
+  .ingredients-page .ingredient-form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .ingredients-page {
+    padding: 14px;
+  }
+
+  .ingredients-page .ingredient-card {
+    padding: 17px;
+  }
+
+  .ingredients-page .ingredient-form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

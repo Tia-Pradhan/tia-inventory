@@ -1,0 +1,142 @@
+
+.consumption-page {
+  padding: 28px;
+  color: #172554;
+  min-width: 0;
+}
+
+.consumption-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.consumption-header h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  color: #172554;
+}
+
+.consumption-header p {
+  margin: 0;
+  color: #64748b;
+}
+
+.consumption-refresh {
+  padding: 11px 18px;
+  background: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.consumption-refresh:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.consumption-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin-bottom: 22px;
+}
+
+.consumption-summary span {
+  color: #64748b;
+}
+
+.consumption-summary strong {
+  font-size: 26px;
+  color: #2563eb;
+}
+
+.consumption-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.consumption-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 750px;
+}
+
+.consumption-table th,
+.consumption-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.consumption-table th {
+  background: #f8fafc;
+  color: #334155;
+  font-weight: 600;
+}
+
+.consumption-table td {
+  color: #475569;
+}
+
+.consumption-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.movement-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.movement-out {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.movement-in {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.consumption-empty {
+  text-align: center !important;
+  padding: 35px !important;
+  color: #64748b !important;
+}
+
+.consumption-error {
+  margin-bottom: 18px;
+  padding: 14px;
+  color: #b91c1c;
+  background: #fee2e2;
+  border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+  .consumption-page {
+    padding: 16px;
+  }
+
+  .consumption-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .consumption-header h1 {
+    font-size: 23px;
+  }
+}

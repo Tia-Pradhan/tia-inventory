@@ -1,0 +1,370 @@
+
+/* ===== Stock Consumption Page ===== */
+
+.consumption-page {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 32px;
+  color: #172554;
+  background: #f4f7fc;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+.consumption-page * {
+  box-sizing: border-box;
+}
+
+.consumption-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.consumption-heading h1 {
+  font-size: 30px;
+  font-weight: 750;
+  letter-spacing: -0.6px;
+  color: #172554;
+  margin: 0 0 8px;
+}
+
+.consumption-heading p {
+  color: #64748b;
+  font-size: 16px;
+  margin: 0;
+}
+
+.consumption-secondary {
+  background: #ffffff;
+  color: #2563eb;
+  border: 1px solid #cbd5e1;
+  padding: 13px 22px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.consumption-secondary:hover {
+  background: #eff6ff;
+  border-color: #3b82f6;
+}
+
+.consumption-secondary:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* Alerts */
+
+.consumption-alert {
+  padding: 15px 18px;
+  margin-bottom: 22px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.consumption-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+.consumption-success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+}
+
+/* Summary cards */
+
+.consumption-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-bottom: 28px;
+}
+
+.consumption-stat {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 25px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+}
+
+.consumption-stat span {
+  color: #64748b;
+  font-size: 16px;
+}
+
+.consumption-stat strong {
+  color: #2563eb;
+  font-size: 32px;
+  font-weight: 750;
+}
+
+/* Form and history cards */
+
+.consumption-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 30px;
+  margin-bottom: 28px;
+  box-shadow: 0 8px 26px rgba(15, 23, 42, 0.045);
+}
+
+.consumption-card h2 {
+  color: #172554;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 750;
+  margin: 0 0 12px;
+}
+
+.consumption-card > p {
+  text-align: center;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 28px;
+}
+
+/* Form layout */
+
+.consumption-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.consumption-field {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  min-width: 0;
+}
+
+.consumption-field label {
+  color: #172554;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.consumption-field input,
+.consumption-field select,
+.consumption-field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #172554;
+  font: inherit;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.consumption-field input,
+.consumption-field select {
+  min-height: 52px;
+}
+
+.consumption-field textarea {
+  min-height: 115px;
+  resize: vertical;
+}
+
+.consumption-field input:focus,
+.consumption-field select:focus,
+.consumption-field textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+/* Record button */
+
+.consumption-primary {
+  display: block;
+  margin: 28px auto 0;
+  padding: 15px 28px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.consumption-primary:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.consumption-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Summary and history tables */
+
+.consumption-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.consumption-table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.consumption-table thead {
+  background: #f1f5f9;
+}
+
+.consumption-table th {
+  padding: 16px;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 750;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.consumption-table td {
+  padding: 16px;
+  color: #475569;
+  font-size: 14px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.consumption-table tbody tr {
+  transition: background 0.15s;
+}
+
+.consumption-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.consumption-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.consumption-table td[colspan] {
+  padding: 30px;
+  text-align: center;
+  color: #64748b;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .consumption-page {
+    padding: 22px;
+  }
+
+  .consumption-form-grid {
+    gap: 20px;
+  }
+
+  .consumption-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .consumption-page {
+    padding: 15px;
+  }
+
+  .consumption-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .consumption-heading h1 {
+    font-size: 25px;
+  }
+
+  .consumption-stats,
+  .consumption-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .consumption-card {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .consumption-card h2 {
+    font-size: 20px;
+  }
+
+  .consumption-primary {
+    width: 100%;
+  }
+}
+
+
+.consumption-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.consumption-filters > input,
+.consumption-filters > select,
+.consumption-filters label {
+  flex: 1 1 150px;
+  min-width: 130px;
+}
+
+.consumption-filters input,
+.consumption-filters select {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 40px;
+  padding: 9px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  background: #fff;
+  color: #1f2937;
+}
+
+.consumption-filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.consumption-filters button {
+  min-height: 40px;
+}

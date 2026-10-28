@@ -1,0 +1,668 @@
+.stats-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-card span {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.stat-card h2 {
+  margin-top: 4px;
+  font-size: 25px;
+}
+
+.dashboard-section {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.section-header {
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.section-header h2 {
+  font-size: 17px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table th,
+table td {
+  text-align: left;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+table th {
+  background: #f9fafb;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+table td {
+  font-size: 14px;
+}
+
+.status {
+  display: inline-flex;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.status.in-stock {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.status.low-stock {
+  background: #fffbeb;
+  color: #b45309;
+}
+
+.status.out-of-stock {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+
+/* Readability fixes for the inventory dashboard */
+.dashboard h1,
+.dashboard h2,
+.dashboard h3,
+.dashboard p,
+.dashboard .page-title,
+.dashboard .stat-value,
+.dashboard .card-title {
+  color: #172554;
+}
+
+.dashboard .stat-card,
+.dashboard .dashboard-card,
+.dashboard .inventory-card {
+  background-color: #ffffff;
+  color: #172554;
+}
+
+.dashboard .stat-value {
+  font-weight: 700;
+}
+
+.dashboard table th {
+  color: #475569;
+}
+
+.dashboard table td {
+  color: #172554;
+}
+
+/* Dashboard text readability fixes */
+
+.stat-card {
+  color: #172554;
+}
+
+.stat-card span {
+  color: #64748b;
+}
+
+.stat-card h2 {
+  color: #172554;
+  font-weight: 700;
+}
+
+.dashboard-section {
+  color: #172554;
+}
+
+.section-header h2 {
+  color: #172554;
+  font-weight: 600;
+}
+
+table th {
+  color: #475569;
+}
+
+table td {
+  color: #172554;
+}
+
+.status.in-stock {
+  color: #047857;
+}
+
+.status.low-stock {
+  color: #b45309;
+}
+
+.status.out-of-stock {
+  color: #b91c1c;
+}
+
+
+/* ===== Dashboard design fixes ===== */
+
+.dashboard,
+.dashboard-container {
+  color: #172554;
+}
+
+.dashboard h1,
+.dashboard h2,
+.dashboard-container h1,
+.dashboard-container h2 {
+  color: #172554 !important;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+
+.dashboard p,
+.dashboard-container p {
+  color: #64748b;
+}
+
+/* Dashboard summary cards */
+.dashboard .stat-card,
+.dashboard .summary-card,
+.dashboard-container .stat-card,
+.dashboard-container .summary-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard .stat-card:hover,
+.dashboard .summary-card:hover,
+.dashboard-container .stat-card:hover,
+.dashboard-container .summary-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+/* Inventory table */
+.dashboard table,
+.dashboard-container table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.dashboard th,
+.dashboard-container th {
+  color: #334155;
+  background: #f8fafc;
+  font-weight: 700;
+  text-align: left;
+}
+
+.dashboard th,
+.dashboard td,
+.dashboard-container th,
+.dashboard-container td {
+  padding: 17px 22px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.dashboard td,
+.dashboard-container td {
+  color: #1e293b;
+}
+
+/* Responsive dashboard */
+@media (max-width: 768px) {
+  .dashboard,
+  .dashboard-container {
+    padding: 18px;
+  }
+
+  .dashboard th,
+  .dashboard td,
+  .dashboard-container th,
+  .dashboard-container td {
+    padding: 12px;
+  }
+}
+
+/* Restaurant-wide dashboard */
+.dashboard-page {
+  color: #172554;
+  min-width: 0;
+}
+
+.dashboard-heading h1,
+.dashboard-page h1,
+.dashboard-page h2,
+.dashboard-page h3 {
+  color: #172554 !important;
+}
+
+.dashboard-heading h1 {
+  margin: 5px 0 8px;
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.dashboard-heading p,
+.dashboard-section-title p,
+.dashboard-section .section-header p {
+  color: #64748b;
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+.dashboard-eyebrow {
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.dashboard-refresh {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 17px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: #fff;
+  color: #1d4ed8;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dashboard-refresh:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.dashboard-error {
+  margin: 18px 0;
+  padding: 14px 16px;
+  color: #991b1b;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+}
+
+.dashboard-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 28px 0 16px;
+}
+
+.dashboard-section-title h2 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.dashboard-section-title > svg {
+  color: #2563eb;
+}
+
+.restaurant-stats-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.restaurant-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  padding: 22px 18px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.035);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.restaurant-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.075);
+}
+
+.restaurant-stat-card .stat-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+}
+
+.stat-icon-blue {
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+.stat-icon-green {
+  color: #047857;
+  background: #ecfdf5;
+}
+
+.stat-icon-purple {
+  color: #7c3aed;
+  background: #f5f3ff;
+}
+
+.stat-icon-cyan {
+  color: #0e7490;
+  background: #ecfeff;
+}
+
+.stat-icon-orange {
+  color: #c2410c;
+  background: #fff7ed;
+}
+
+.stat-icon-red {
+  color: #b91c1c;
+  background: #fef2f2;
+}
+
+.restaurant-stat-content {
+  min-width: 0;
+}
+
+.restaurant-stat-content span {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.restaurant-stat-content h2 {
+  margin: 7px 0 0;
+  font-size: clamp(19px, 2vw, 25px);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.dashboard-panels {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 20px;
+  margin-top: 22px;
+}
+
+.dashboard-section {
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.035);
+}
+
+.dashboard-section .section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.dashboard-section .section-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.dashboard-section .section-header > svg {
+  flex-shrink: 0;
+  color: #2563eb;
+}
+
+.dashboard-section .table-container {
+  overflow-x: auto;
+}
+
+.dashboard-section table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.dashboard-section th {
+  background: #f8fafc;
+  color: #334155;
+  text-align: left;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.dashboard-section th,
+.dashboard-section td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 13px;
+}
+
+.dashboard-section td {
+  color: #334155;
+}
+
+.dashboard-section tbody tr:hover {
+  background: #f8fafc;
+}
+
+.dashboard-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 130px;
+  padding: 24px;
+  color: #64748b;
+  text-align: center;
+  font-size: 14px;
+}
+
+.dashboard-empty p {
+  margin: 0;
+}
+
+.dashboard-alert-list {
+  padding: 4px 18px;
+}
+
+.dashboard-alert-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.dashboard-alert-item:last-child {
+  border-bottom: none;
+}
+
+.dashboard-alert-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+}
+
+.alert-critical {
+  color: #b91c1c;
+  background: #fef2f2;
+}
+
+.alert-warning {
+  color: #c2410c;
+  background: #fff7ed;
+}
+
+.dashboard-alert-item strong {
+  color: #1e293b;
+  font-size: 14px;
+}
+
+.dashboard-alert-item p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.wastage-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 16px;
+  padding: 15px;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+.wastage-summary span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.wastage-summary strong {
+  color: #172554;
+  font-size: 22px;
+}
+
+.dashboard-reason-list {
+  padding: 0 18px 14px;
+}
+
+.dashboard-reason-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 11px 0;
+  border-bottom: 1px solid #f1f5f9;
+  color: #475569;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.dashboard-reason-row strong {
+  color: #172554;
+}
+
+.dashboard-footer-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 22px;
+  padding: 14px 16px;
+  color: #64748b;
+  background: #eff6ff;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.dashboard-footer-note svg {
+  flex-shrink: 0;
+  color: #2563eb;
+}
+
+.dashboard-loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 32px;
+  color: #475569;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+
+.spin-icon {
+  animation: dashboard-spin 1s linear infinite;
+}
+
+@keyframes dashboard-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1200px) {
+  .restaurant-stats-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .dashboard-panels {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .restaurant-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .dashboard-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .restaurant-stats-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .restaurant-stat-card {
+    padding: 16px;
+  }
+
+  .dashboard-section .section-header {
+    padding: 16px;
+  }
+}
